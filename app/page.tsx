@@ -242,30 +242,51 @@ export default function Home() {
       </section>
 
       {/* Interview Confidence Section */}
-      <section className="py-16 md:py-24 bg-gray-50">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4 text-center text-balance">
-            Designed to improve confidence before interviews
-          </h2>
-          <p className="text-gray-600 text-center mb-12 max-w-2xl mx-auto">
-            We prepare you for every stage of the interview process
+     <section className="py-16 md:py-24 bg-gray-50">
+  <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+
+    <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4 text-center">
+      Designed to improve confidence before interviews
+    </h2>
+
+    <p className="text-gray-600 text-center mb-14 max-w-2xl mx-auto">
+      We prepare you for every stage of the interview process
+    </p>
+
+    <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+
+      {[
+        { title: "Mock Interviews", desc: "Practice with industry professionals", icon: "🎤" },
+        { title: "Resume Review", desc: "Get your CV job-ready", icon: "📄" },
+        { title: "Doubt Support", desc: "1-on-1 mentor guidance", icon: "💬" },
+        { title: "Salary Guidance", desc: "Negotiate confidently", icon: "📈" }
+      ].map((item) => (
+
+        <div
+          key={item.title}
+          className="bg-white p-6 rounded-xl border border-gray-200 shadow-sm text-center 
+          hover:shadow-lg hover:-translate-y-1 transition duration-300"
+        >
+
+          <div className="w-12 h-12 mx-auto mb-4 flex items-center justify-center rounded-lg bg-blue-100 text-xl">
+            {item.icon}
+          </div>
+
+          <h3 className="text-lg font-semibold text-gray-900 mb-2">
+            {item.title}
+          </h3>
+
+          <p className="text-gray-600 text-sm">
+            {item.desc}
           </p>
 
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
-            {[
-              { title: "Mock Interviews", desc: "Practice with industry professionals" },
-              { title: "Resume Review", desc: "Get your CV job-ready" },
-              { title: "Doubt Support", desc: "1-on-1 mentor guidance" },
-              { title: "Salary Guidance", desc: "Negotiate confidently" }
-            ].map((item) => (
-              <Card key={item.title} className="p-6 text-center">
-                <h3 className="text-base font-bold text-gray-900 mb-2">{item.title}</h3>
-                <p className="text-gray-600 text-sm">{item.desc}</p>
-              </Card>
-            ))}
-          </div>
         </div>
-      </section>
+
+      ))}
+    </div>
+
+  </div>
+</section>
 
       {/* Testimonials Section */}
       <section className="py-16 md:py-24 bg-white">
@@ -407,10 +428,10 @@ export default function Home() {
       </section>
 
       {/* Final CTA */}
-      <section className="bg-gradient-to-r from-blue-600 to-indigo-600 text-white py-16 md:py-20">
+      {/* <section className="bg-gradient-to-r from-blue-600 to-indigo-600 text-white py-16 md:py-20">
         <div className="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
           <h2 className="text-3xl md:text-4xl font-bold mb-4 text-balance">
-            Ready to start your training journey?
+            Ready to start your training journey? 
           </h2>
           <p className="text-blue-100 mb-8 text-lg">
             Take the first step towards a rewarding career in tech. Enroll today and transform your future.
@@ -419,7 +440,7 @@ export default function Home() {
             Explore All Courses
           </Button>
         </div>
-      </section>
+      </section> */}
 
       <Footer />
     </div>
